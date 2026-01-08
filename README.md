@@ -13,7 +13,7 @@ Python and SQL
 Data Source:
 Data was ingested via RESTAPI .
 
-# Data Ingestion: Azure Data Factory
+# Data Ingestion: Fabric Data Factory
 Fabric Data Factory (FDF) orchestrates and manages data ingestion activities.
 
 Raw data is ingested into Onelake.
