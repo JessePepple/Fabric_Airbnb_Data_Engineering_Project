@@ -99,7 +99,7 @@ Curated datasets were easily loaded into the warehouse, with CTAS used to create
 
 # Data Visualisation
 
-After loading the data, I visualized our curated and newly stored Airbnb datasets to explore insights and validate the transformations.
+After loading the data, I visualized the curated Airbnb datasets to validate transformations in PowerBI within Fabric and uncover actionable insights.
 
 <img width="1440" height="663" alt="Screenshot 2026-01-07 at 01 17 23" src="https://github.com/user-attachments/assets/d2c4007b-042e-4824-8819-e4117875a1aa" />
 
