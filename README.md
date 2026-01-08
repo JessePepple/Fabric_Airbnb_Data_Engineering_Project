@@ -2,6 +2,7 @@
 
 This project demonstrates the capabilities of Microsoft Fabric using Airbnb datasets ingested through Microsoft Fabric Data Factory and stored in a Lakehouse following the Medallion Architecture (Bronze, Silver, and Gold layers). Data transformations were performed using Fabric Notebooks, with a dynamic SCD Type 2 implemented in the Gold layer. The final Gold layer was modelled using a Star Schema to enable efficient analytics and reporting.
 
+Interested in more indepth storytelling of this project? Visit here -> https://www.jesseportfolio.co.uk/post/microsoft_fabric_airbnb_data_engineering_project 
 <img width="2517" height="1080" alt="Fabric_Overview" src="https://github.com/user-attachments/assets/adc2ec32-d136-46ab-b91d-61629f323244" />
 
 
