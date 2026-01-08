@@ -28,7 +28,7 @@ Unlike Logic Apps via Azure Datafactory Pipeline was monitored via email activit
 
 Transformations include modular cleaning, enrichment, and business logic application.
 
-# Curated Gold Layer: SCD TYPE 2 AND STAR SCHEMA
+# Curated Gold Layer: SCD TYPE 2 
 Since the project was done within Fabric and not Databricks I could not utilise DLT but neverthless manual application of 
 
 Slowly Changing Dimensions (SCD Type 2) are applied to dimension tables for historical tracking.
