@@ -2,6 +2,16 @@
 
 This project demonstrates the capabilities of Microsoft Fabric using Airbnb datasets ingested through Microsoft Fabric Data Factory and stored in a Lakehouse following the Medallion Architecture (Bronze, Silver, and Gold layers). Data transformations were performed using Fabric Notebooks, with a dynamic SCD Type 2 implemented in the Gold layer. The final Gold layer was modelled using a Star Schema to enable efficient analytics and reporting.
 
+Key Takeaways / Project Impact
+
+Manual vs Automated SCDs: Manual SCD Type 2 works but is time-consuming and error-prone; DLT in Databricks could streamline this
+
+Fabric Efficiency: Parameterized pipelines and email monitoring improved reliability and reduced operational risk
+
+Dimensional Modeling: Star Schema and SCD Type 2 ensured historical tracking and query efficiency
+
+Portfolio Impact: Demonstrates modern end-to-end pipeline design within Microsoft Fabric, showcasing adaptability to multiple cloud platforms
+
 Interested in more indepth storytelling of this project? Visit here -> https://www.jesseportfolio.co.uk/post/microsoft_fabric_airbnb_data_engineering_project 
 <img width="2517" height="1080" alt="Fabric_Overview" src="https://github.com/user-attachments/assets/adc2ec32-d136-46ab-b91d-61629f323244" />
 
@@ -36,6 +46,24 @@ Slowly Changing Dimensions (SCD Type 2) are applied to dimension tables for hist
 
 Upserts (SCD Type 1) are applied to fact tables to keep data up to date. 
 
+Data Governance & Architecture
+
+Goal: Ensure secure, centralized governance while implementing a scalable Medallion Architecture.
+
+KPIs & Metrics:
+
+Medallion Architecture: Bronze → Silver → Gold layers implemented
+
+Governance: OneLake storage with parameterized pipelines and controlled access
+
+Data Lineage: End-to-end lineage visualized in Fabric workspace
+
+Monitoring: Email alerts configured for pipeline failures
+
+Result Statement:
+
+Successfully built a governed and traceable environment for Airbnb datasets, ensuring data quality, accessibility, and end-to-end visibility.
+
 # Phase 1 Ingestion Fabric Data Factory
 <img width="1440" height="716" alt="Screenshot 2026-01-05 at 15 23 09" src="https://github.com/user-attachments/assets/beb47b99-b21d-45d2-bc4c-a73437815290" />
 Our Workspace
@@ -47,6 +75,22 @@ While utilising Fabric Data Factory, I observed clear differences in pipeline or
 <img width="1440" height="663" alt="Screenshot 2026-01-05 at 16 20 06" src="https://github.com/user-attachments/assets/0b5e49a4-8397-4930-8d0d-e94e2d3bee54" />
 <img width="1440" height="663" alt="Screenshot 2026-01-05 at 16 19 34" src="https://github.com/user-attachments/assets/c3191e20-8c15-4928-afa0-5a4beafd3567" />
 Once the pipeline was successfully implemented, I added further validation by configuring an Email activity to trigger on failure, enabling easy monitoring and prompt notification in the event of any pipeline issues.
+
+Goal: Efficiently ingest Airbnb source data into the Lakehouse.
+
+KPIs & Metrics:
+
+Fabric Data Factory: Orchestrated ingestion with parameterized ForEach activities
+
+Dynamic Control: JSON control table enabled dynamic entity ingestion
+
+Staging (Bronze): Raw datasets ingested into OneLake for downstream transformations
+
+Error Handling: Email notification on pipeline failure for immediate intervention
+
+Result Statement:
+
+Delivered a fully automated ingestion process with dynamic configuration, providing reliable and monitored data flow from REST API sources to the Lakehouse.
 
 # Phase Enriched Silver Transformations
 
@@ -62,6 +106,19 @@ After completing data cleaning and transformations, the enriched datasets were w
 
 <img width="1440" height="663" alt="Screenshot 2026-01-08 at 04 39 10" src="https://github.com/user-attachments/assets/e2e2b1be-7677-4da9-9bb9-c2d822a5c8ed" />
 
+Goal: Clean, enrich, and prepare datasets for analytical use.
+
+KPIs & Metrics:
+
+Data Cleaning: Added analytical context, casted data types, and resolved inconsistencies
+
+Optimizations: Leveraged Fabric automatic optimizations (OPTIMIZE / Z-ORDER)
+
+Materialization: Silver datasets written as tables to support SCD Type 2 implementation
+
+Result Statement:
+
+Produced enriched, analytics-ready datasets in the Silver Lakehouse, minimizing manual optimization effort.
 
 # Phase 3 Curated Gold Layer(SCD Type 2 And Star Schema)
 To finalise the project, I implemented a dynamic dimensional modelling with a primary focus on SCD Type 2 to enable historical tracking(So in further essence an SCD Type 2 builder all in one notebook). Following this, I curated the fact table to support efficient joins and downstream analytics.
@@ -74,6 +131,22 @@ And then for our fact table I employed SCD TYPE 1 for updates and inserts.
 <img width="1440" height="437" alt="Screenshot 2026-01-08 at 04 58 08" src="https://github.com/user-attachments/assets/176b3feb-41f2-456a-9bf4-f6b83d6db052" />
 
 At this stage, the curated datasets were finalised and written to the Gold Lakehouse. Tables were created over the curated files to enable seamless CTAS operations when loading data into the designated Fabric Data Warehouse.
+
+Goal: Enable historical tracking and efficient analytics with curated datasets.
+
+KPIs & Metrics:
+
+SCD Type 2: Implemented dynamic historical tracking in dimension tables
+
+SCD Type 1: Applied upserts to fact tables for real-time updates
+
+Star Schema: Modeled fact and dimension tables for optimized querying and reporting
+
+Curated Gold: Final datasets ready for warehouse ingestion and analytics
+
+Result Statement:
+
+Delivered a fully curated Gold layer with dynamic SCD Type 2 management, enabling historical tracking and star-schema-driven analytics.
 
 # Loading To Fabric Data Warehouse
 
@@ -106,6 +179,20 @@ After loading the data, I visualized the curated Airbnb datasets to validate tr
 
 <img width="1313" height="663" alt="Screenshot 2026-01-07 at 01 20 18" src="https://github.com/user-attachments/assets/8c8122cf-2a1d-4202-aa65-8031c3d97ebb" />
 <img width="1440" height="663" alt="Screenshot 2026-01-07 at 01 23 55" src="https://github.com/user-attachments/assets/d7f28825-ba2d-472d-b5c9-312842f746e9" />
+
+Goal: Make curated datasets available for reporting and BI consumption.
+
+KPIs & Metrics:
+
+Lakehouse to Warehouse: CTAS used to create structured tables for Fabric Data Warehouse
+
+SQL Validation: Queries executed to confirm integrity and readiness for analysis
+
+Data Visualization: Power BI dashboards created within Fabric to validate transformations and uncover insights
+
+Result Statement:
+
+Enabled seamless access to analytics-ready Airbnb datasets, validated and visualized, supporting business intelligence and reporting needs
 
 # Semantic Model 
 
