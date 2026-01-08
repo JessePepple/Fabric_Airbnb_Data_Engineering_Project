@@ -51,6 +51,8 @@ Once the pipeline was successfully implemented, I added further validation by co
 
 In the second phase of the project, I focused on data cleaning and transformations. This primarily involved adding new columns to provide analytical context and casting data types, particularly for our datasets ingested in Parquet format. Through these cleaning and transformation steps, I was able to derive meaningful insights using Fabric Notebooks.
 
+<img width="1440" height="635" alt="Screenshot 2026-01-08 at 05 42 12" src="https://github.com/user-attachments/assets/351924d2-59c1-4b94-984d-35e40afeb540" />
+
 <img width="1440" height="663" alt="Screenshot 2026-01-08 at 04 35 52" src="https://github.com/user-attachments/assets/25a2d73a-12cf-4849-b0be-b59a37e574c6" />
 <img width="1440" height="663" alt="Screenshot 2026-01-08 at 04 37 55" src="https://github.com/user-attachments/assets/1ad0aeec-095e-4c48-af58-e036d1b9a90c" />
 
