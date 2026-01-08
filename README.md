@@ -35,7 +35,7 @@ Slowly Changing Dimensions (SCD Type 2) are applied to dimension tables for hist
 
 Upserts (SCD Type 1) are applied to fact tables to keep data up to date. 
 
-# Phase 1 Ingestion
+# Phase 1 Ingestion Fabric Data Factory
 <img width="1440" height="716" alt="Screenshot 2026-01-05 at 15 23 09" src="https://github.com/user-attachments/assets/beb47b99-b21d-45d2-bc4c-a73437815290" />
 Our Workspace
 
