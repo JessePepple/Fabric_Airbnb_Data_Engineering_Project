@@ -41,9 +41,9 @@ Our Workspace
 
 
 <img width="1440" height="663" alt="Screenshot 2026-01-05 at 16 16 30" src="https://github.com/user-attachments/assets/f5f5e55a-fbde-492b-9d2e-c28f42f950dd" />
-<img width="1440" height="663" alt="Screenshot 2026-01-05 at 16 20 06" src="https://github.com/user-attachments/assets/0b5e49a4-8397-4930-8d0d-e94e2d3bee54" />
-While utilising Fabric Data Factory, I observed clear differences in pipeline orchestration, which required some adaptation. For this project, the main focus was on effectively using ForEach activities and parameterisation. I implemented a JSON control table containing all parameterised entities and stored it in OneLake. A Lookup activity was then used to read this configuration and dynamically drive the ForEach activity, enabling the successful ingestion of all datasets into their respective folders in the OneLake.
 
+While utilising Fabric Data Factory, I observed clear differences in pipeline orchestration, which required some adaptation. For this project, the main focus was on effectively using ForEach activities and parameterisation. I implemented a JSON control table containing all parameterised entities and stored it in OneLake. A Lookup activity was then used to read this configuration and dynamically drive the ForEach activity, enabling the successful ingestion of all datasets into their respective folders in the OneLake.
+<img width="1440" height="663" alt="Screenshot 2026-01-05 at 16 20 06" src="https://github.com/user-attachments/assets/0b5e49a4-8397-4930-8d0d-e94e2d3bee54" />
 <img width="1440" height="663" alt="Screenshot 2026-01-05 at 16 19 34" src="https://github.com/user-attachments/assets/c3191e20-8c15-4928-afa0-5a4beafd3567" />
 Once the pipeline was successfully implemented, I added further validation by configuring an Email activity to trigger on failure, enabling easy monitoring and prompt notification in the event of any pipeline issues.
 
