@@ -10,7 +10,7 @@ Python and SQL
 
 # Architecture Summary
 
-Data Source: Azure SQL Database
+Data Source:
 Data was ingested via RESTAPI .
 
 # Data Ingestion: Azure Data Factory
